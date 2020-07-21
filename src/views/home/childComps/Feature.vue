@@ -1,0 +1,15 @@
+<template>
+	<div class="feature">
+    <img src="~assets/img/home/feature_bg.jpg" alt="">
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'Feature'
+	}
+</script>
+
+<style scoped>
+
+</style>

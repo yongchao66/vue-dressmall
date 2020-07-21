@@ -1,0 +1,6 @@
+export const ADD_TO_CART = 'addToCart'
+export const ADD_COUNTER = 'addCounter'
+export const ADD = 'add'
+export const SUB = 'sub'
+export const DEL = 'del'
+export const DEL_ALL = 'delAll'

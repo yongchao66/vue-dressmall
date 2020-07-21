@@ -1,22 +1,82 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
+
+const Home = () => import('views/home/Home')
+const Category = () => import('views/category/Category')
+const Cart = () => import('views/cart/Cart')
+const Profile = () => import('views/profile/Profile')
+const Detail = () => import('views/detail/Detail')
+const Sreach = () => import('views/sreach/Sreach')
+const Login = () => import('views/login/Login')
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
+	{
+		path: '',
+		redirect: '/home'
+	},
+	{
+		path: '/home',
+		name: 'Home',
+		component: Home,
+    meta: {
+      title: "蘑菇街",
+      keepAlive: true,
+      showTab: true
+    }
+	},
+	{
+		path: '/category',
+		name: 'Category',
+		component: Category,
+    meta: {
+      keepAlive: true,
+      showTab: true
+    }
+	},
+	{
+		path: '/cart',
+		name: 'Cart',
+		component: Cart,
+    meta: {
+      keepAlive: true,
+      showTab: true
+    }
+	},
+	{
+		path: '/profile',
+		name: 'Profile',
+		component: Profile,
+    meta: {
+      keepAlive: true,
+      showTab: true
+    }
+	},
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/detail/:id',
+    name: 'Detail',
+    component: Detail,
+    meta: {
+      keepAlive: false
+    }
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/sreach',
+    name: 'Sreach',
+    component: Sreach,
+    meta: {
+      keepAlive: false
+    }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    meta: {
+      keepAlive: false
+    }
   }
 ]
 

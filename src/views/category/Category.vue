@@ -151,13 +151,17 @@
 
   .category-left {
     width: 80px;
+    background-color: #eee;
   }
 
   .fixed {
     position: fixed;
     top: 44px;
     right: 0;
+    left: 80px;
     z-index: 10;
+		max-width: 688px;
     width: calc(100% - 80px);
+    margin: 0 auto;
   }
 </style>

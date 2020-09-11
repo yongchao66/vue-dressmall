@@ -48,7 +48,6 @@
     line-height: 2.75rem;
     font-size: 0.875rem;
     text-align: center;
-    background-color: #eee;
   }
 
   .active {
